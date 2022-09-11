@@ -8,38 +8,92 @@
 
 <body>
   <!--
-Необязательное задание.
+Обязательное задание.
 
-Необходимо от пользователя получить число.
-Необходимо вывести разряды числа, а  именно: количество сотен, десятков и единиц.
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
 
-Пример:
-Пользователь ввел число 163. Программа должна вывести:
-"В числе 163 количество сотен: 1, десятков: 6, единиц: 3"
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
 
-Уточнение: пользователь всегда вводит корректное положительное целое число.
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
-  <form action="" class="boyChisla">
-    <label for="sotni" style="display: block; margin: 30px 0px;">
-      <p style="display: inline">Сотни</p>
-      <input type="text" id="sotni" disabled style="padding: 0px 5px">
-    </label>
-    <label for="desatki" style="display: block; margin: 30px 0px;">
-      <p style="display: inline">Десятки</p>
-      <input type="text" id="desatki" disabled style="padding: 0px 5px">
-    </label>
-    <label for="edinizi" style="display: block; margin: 30px 0px;">
-      <p style="display: inline">Единицы</p>
-      <input type="text" id="edinizi" disabled style="padding: 0px 5px">
-    </label>
-  </form>
   <script>
     "use strict";
 
-    let userChislo = prompt('Введи число от 100 до 999, для разбивки его на разряды');
-    document.getElementById('sotni').value = Number.parseInt((userChislo / 100) % 10);
-    document.getElementById('desatki').value = Number.parseInt((userChislo / 10) % 10);
-    document.getElementById('edinizi').value = Number.parseInt(userChislo % 10);
+    /**
+     * Функция сложения
+     * @param {number} operand1 - первый операнд исчисления
+     * @param {number} operand2 - второй операнд исчисления
+     * @return {number} - возвращает результат исчисления преданных операндов
+     */
+    function fold(operand1, operand2) {
+      return operand1 + operand2;
+    }
+
+    /**
+     * Функция вычитания
+     * @param {number} operand1 - первый операнд исчисления
+     * @param {number} operand2 - второй операнд исчисления
+     * @return {number} - возвращает результат исчисления преданных операндов
+     */
+    function subtract(operand1, operand2) {
+      if (operand1 > operand2) {
+        return operand1 - operand2;
+      }
+      return operand2 - operand1;
+    }
+
+    /**
+     * Функция деления
+     * @param {number} operand1 - первый операнд исчисления
+     * @param {number} operand2 - второй операнд исчисления
+     * @return {number} - возвращает результат исчисления преданных операндов
+     */
+    function divide(operand1, operand2) {
+      if (operand1 > operand2) {
+        return operand1 / operand2;
+      }
+      return operand2 / operand1;
+    }
+
+    /**
+     * Функция умножения
+     * @param {number} operand1 - первый операнд исчисления
+     * @param {number} operand2 - второй операнд исчисления
+     * @return {number} - возвращает результат исчисления преданных операндов
+     */
+    function multiply(operand1, operand2) {
+      return operand1 * operand2;
+    }
+
+    console.log("складываем:  " + fold(8, 9));
+    console.log("вычитаем:    " + subtract(8, 9));
+    console.log("делим:       " + divide(8, 9));
+    console.log("умножаем:    " + multiply(8, 9));
+
+    console.log("складываем:  " + fold(7, 5));
+    console.log("вычитаем:    " + subtract(7, 5));
+    console.log("делим:       " + divide(7, 5));
+    console.log("умножаем:    " + multiply(7, 5));
+
+    console.log("складываем:  " + fold(5, 5));
+    console.log("вычитаем:    " + subtract(5, 5));
+    console.log("делим:       " + divide(5, 5));
+    console.log("умножаем:    " + multiply(5, 5));
+
   </script>
 </body>
 
