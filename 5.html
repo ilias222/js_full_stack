@@ -7,129 +7,24 @@
 </head>
 
 <body>
-  <!-- <form action="" class="cells">
-    <input type="text" id="window" disabled value="0">
-    <button id="fold">+</button>
-    <button id="subtract">-</button>
-    <button id="divide">/</button>
-    <button id="multiply">*</button>
-    <button id="number1" onclick="buffer(1)">1</button>
-    <button id="number2">2</button>
-    <button id="number3">3</button>
-    <button id="number4">4</button>
-    <button id="number5">5</button>
-    <button id="number6">6</button>
-    <button id="number7">7</button>
-    <button id="number8">8</button>
-    <button id="number9">9</button>
-    <button id="number0">0</button>
-
-  </form> -->
   <!--
-Обязательное задание.
+Необязательное задание.
 
-Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
-Необходимо реализовать функцию:
-mathOperation(arg1, arg2, operation);
-Параметры:
-arg1 - первое число.
-arg2 - второе число.
-operation - строка, которая содержит один символ из: "+", "-", "*", "/".
-Функция mathOperation должна вернуть результат операции, который был передан в
-параметр operation для двух первых аргументов (arg1 и arg2).
-Функция mathOperation должна использовать для вычисления функции из 4 задания.
+Вывести с помощью цикла for числа от 0 до 9, НЕ используя тело цикла. То есть
+выглядеть должно примерно так:
 
-Примеры вызова функции:
-console.log(mathOperation(5, 3, "+")); // 8
-console.log(mathOperation(5, 3, ":)")); // NaN
+for(…){/* здесь пусто */}
 
-Функции mathOperation всегда передаются корректные числа, проверки на NaN,
-Infinity делать не нужно, однако, в случае если был передан некорректный
-аргумент в параметр operation, необходимо вернуть NaN.
-
-Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+Вместо многоточия нужно записать нужные разделы.
+Помните, что в первом, втором и третьем раздела цикла можно не только писать
+условия или увеличивать счетчик, в этих разделах допустимы любые выражения,
+например вызовы функций.
 -->
   <script>
     "use strict";
 
-    const arg1 = prompt('введи первый операнд');
-    const arg2 = prompt('введи второй операнд');
-    const operation = prompt('введи операцию');
+    for (let i = 0; i != 10; console.log(i), i++) {
 
-    // function buffer(param) {
-    //   return document.getElementById('window').value += param;
-    // }
-
-    mathOperation(arg1, arg2, operation);
-
-    /**
-     * Функция принимающая операнды и вид операции
-     * После распределяющая по функциям вида исчисления
-     * @param {number} arg1 - первый оператд 
-     * @param {number} arg2 - второй оператд 
-     * @param {string} operation - вид операции 
-     * @return {number} - выводит результат обращения к 
-     * функции видв исчисления
-    */
-    function mathOperation(arg1, arg2, operation) {
-      if (operation === '+') {
-        return alert(fold(arg1, arg2));
-      }
-      if (operation === '-') {
-        return alert(subtract(arg1, arg2));
-      }
-      if (operation === '/') {
-        return alert(divide(arg1, arg2));
-      }
-      if (operation === '+') {
-        return alert(multiply(arg1, arg2));
-      }
-    }
-
-    /**
-     * Функция сложения
-     * @param {number} operand1 - первый операнд исчисления
-     * @param {number} operand2 - второй операнд исчисления
-     * @return {number} - возвращает результат исчисления преданных операндов
-     */
-    function fold(operand1, operand2) {
-      return operand1 + operand2;
-    }
-
-    /**
-     * Функция вычитания
-     * @param {number} operand1 - первый операнд исчисления
-     * @param {number} operand2 - второй операнд исчисления
-     * @return {number} - возвращает результат исчисления преданных операндов
-     */
-    function subtract(operand1, operand2) {
-      if (operand1 > operand2) {
-        return operand1 - operand2;
-      }
-      return operand2 - operand1;
-    }
-
-    /**
-     * Функция деления
-     * @param {number} operand1 - первый операнд исчисления
-     * @param {number} operand2 - второй операнд исчисления
-     * @return {number} - возвращает результат исчисления преданных операндов
-     */
-    function divide(operand1, operand2) {
-      if (operand1 > operand2) {
-        return operand1 / operand2;
-      }
-      return operand2 / operand1;
-    }
-
-    /**
-     * Функция умножения
-     * @param {number} operand1 - первый операнд исчисления
-     * @param {number} operand2 - второй операнд исчисления
-     * @return {number} - возвращает результат исчисления преданных операндов
-     */
-    function multiply(operand1, operand2) {
-      return operand1 * operand2;
     }
   </script>
 </body>

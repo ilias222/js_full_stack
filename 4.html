@@ -10,89 +10,64 @@
   <!--
 Обязательное задание.
 
-Необходимо реализовать четыре функции, каждая функция должна принимать по два
-числа и выполнять одну из операций (каждая функция выполняет одну из них):
-1. Сложение
-2. Разность
-3. Умножение
-4. Деление
-
-Необходимо сделать так, чтобы функция вернула число, например выражение
-`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
-сложения в данном примере, ваши названия функций могут отличаться).
-
-Округлять значения, которые возвращают функции не нужно, однако, обратите
-внимание на разность, функция должна вычесть из большего числа меньшее, либо
-вернуть 0, если числа равны.
-
-Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
-не нужно.
-
-Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна
+фотография используя метод filter. Исходные данные - массив products.
+2. Необходимо отсортировать массив products используя метод sort по цене,
+начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести
+отсортированный массив в консоль.
 -->
   <script>
     "use strict";
 
-    /**
-     * Функция сложения
-     * @param {number} operand1 - первый операнд исчисления
-     * @param {number} operand2 - второй операнд исчисления
-     * @return {number} - возвращает результат исчисления преданных операндов
-     */
-    function fold(operand1, operand2) {
-      return operand1 + operand2;
-    }
+    const products = [
+      {
+        id: 3,
+        price: 127,
+        photos: [
+          "1.jpg",
+          "2.jpg",
+        ],
+      },
+      {
+        id: 5,
+        price: 499,
+        photos: [],
+      },
+      {
+        id: 10,
+        price: 26,
+        photos: [
+          "3.jpg",
+        ],
+      },
+      {
+        id: 8,
+        price: 78,
+      },
+    ];
 
-    /**
-     * Функция вычитания
-     * @param {number} operand1 - первый операнд исчисления
-     * @param {number} operand2 - второй операнд исчисления
-     * @return {number} - возвращает результат исчисления преданных операндов
-     */
-    function subtract(operand1, operand2) {
-      if (operand1 > operand2) {
-        return operand1 - operand2;
-      }
-      return operand2 - operand1;
-    }
 
-    /**
-     * Функция деления
-     * @param {number} operand1 - первый операнд исчисления
-     * @param {number} operand2 - второй операнд исчисления
-     * @return {number} - возвращает результат исчисления преданных операндов
-     */
-    function divide(operand1, operand2) {
-      if (operand1 > operand2) {
-        return operand1 / operand2;
-      }
-      return operand2 / operand1;
-    }
+    //Если бы не пример решения, потратил бы не один вечер на понимание как это
+    //работает
 
-    /**
-     * Функция умножения
-     * @param {number} operand1 - первый операнд исчисления
-     * @param {number} operand2 - второй операнд исчисления
-     * @return {number} - возвращает результат исчисления преданных операндов
-     */
-    function multiply(operand1, operand2) {
-      return operand1 * operand2;
-    }
+    console.log(products.filter(element => element.photos?.length));
+    products.sort((a, b) => a.price - b.price);
+    console.log(products);
 
-    console.log("складываем:  " + fold(8, 9));
-    console.log("вычитаем:    " + subtract(8, 9));
-    console.log("делим:       " + divide(8, 9));
-    console.log("умножаем:    " + multiply(8, 9));
+    // for (let i = 0; i < products.length; i++) {
+    //   if (!products[i].photos) {
+    //     console.log(`Имя свойства "photos" отсутствует в массиве с индексом
+    //     - "${i}"`);
+    //     continue;
+    //   } else if (!products[i].photos.length) {
+    //     console.log(`Массив родитель с индексом - "${i}",
+    //     не имеет значение в массиве фото`);
+    //   }
+    //   for (let b = 0; b < products[i].photos.length; b++) {
 
-    console.log("складываем:  " + fold(7, 5));
-    console.log("вычитаем:    " + subtract(7, 5));
-    console.log("делим:       " + divide(7, 5));
-    console.log("умножаем:    " + multiply(7, 5));
-
-    console.log("складываем:  " + fold(5, 5));
-    console.log("вычитаем:    " + subtract(5, 5));
-    console.log("делим:       " + divide(5, 5));
-    console.log("умножаем:    " + multiply(5, 5));
+    //     console.log(products[i].photos[b]);
+    //   }
+    // }
 
   </script>
 </body>
