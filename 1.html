@@ -4,6 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
+  <style>
+    .product {
+      width: 200px;
+      padding: 10px;
+      float: left;
+      margin-right: 30px;
+      box-shadow: 0 0 4px black;
+    }
+  </style>
 </head>
 
 <body>
@@ -13,87 +22,81 @@
 Выполнить все задачи в теге script. Комментарии, в которых написаны задачи, не
 стирать, код с решением задачи пишем под комментарием.
 -->
-
-  <a href="#" class="card-link">Card link</a>
-  <a href="#" class="card-link">Another link</a>
-
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title" data-number="100">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text" data-number="50">
-        Some quick example text to build on the card title and make up the bulk of the card's
-        content.
-      </p>
-      <a href="#" id="super_link" class="card-link">Card link</a>
-      <a href="#" class="card-link" data-number="50">Another link</a>
-    </div>
+  <div class="product">
+    <div class="productName">Товар 1</div>
+    <img src="https://loremflickr.com/200/300/goods?lock=2" alt="">
+    <button>В корзину</button>
+  </div>
+  <div class="product">
+    <div class="productName">Товар 2</div>
+    <img src="https://loremflickr.com/200/300/goods?lock=12" alt="">
+    <button>В корзину</button>
+  </div>
+  <div class="product">
+    <div class="productName">Товар 3</div>
+    <img src="https://loremflickr.com/200/300/goods?lock=33" alt="">
+    <button>В корзину</button>
   </div>
 
   <script>
     "use strict";
 
     /*
-    1. Найти по id, используя getElementById, элемент с id равным "super_link" и
-    вывести этот элемент в консоль.
+    1. Установите всем элементам с классом "productName" размер шрифта 24px.
      */
-    console.log(document.getElementById("super_link"));
+    const fontSiseElement = document.querySelectorAll(".productName");
+    fontSiseElement.forEach(element => element.style.fontSize = "24px");
 
     /*
-    2. Внутри всех элементов на странице, которые имеют класс "card-link",
-    поменяйте текст внутри элемента на "ссылка".
+    2. Установите всем элементам с классом "product" внешний отступ справа 50px.
      */
 
-    const elemList = document.querySelectorAll('.card-link');
-    for (const elem of elemList) {
-      console.log(elem.textContent = "ссылка");
-    }
+    const marginnElement = document.querySelectorAll(".product");
+    marginnElement.forEach(produc => produc.style.marginRight = "50px");
 
     /*
-    3. Найти все элементы на странице с классом "card-link", которые лежат в
-    элементе с классом "card-body" и вывести полученную коллекцию в консоль.
+    3. При клике на кнопку "В корзину" название кнопки должно поменяться на
+    "Добавлено" и кнопка должна стать неактивной.
      */
+    const buttonClick = document.querySelectorAll("button");
+    buttonClick.forEach(copf => {
+      copf.addEventListener("click", () => {
+        copf.innerText = "Добавленно";
+        copf.disabled = true;
+      })
+    });
 
-    // Забавно, если убрать пробел между именами классов, то получиться
-    // NodeList[]. С пробелом NodeList(2) [a#super_link.card-link, a.card-link]
-
-    console.log(document.querySelectorAll(".card-body .card-link"));
 
     /*
-    4. Найти первый попавшийся элемент на странице у которого есть атрибут
-    data-number со значением 50 и вывести его в консоль.
+    4. Создайте полную (глубокую) копию элемента с классом product, измените в
+    этой копии путь до картинки на:
+    https://loremflickr.com/200/300/goods?lock=37
+    Поставьте название товара в данной копии "Товар 4" и замените последний
+    отображенный товар на странице на созданную копию. У данной копии также
+    должен правильно работать код из 3-го задания.
      */
+    // Я сначала написал его сам. Потом скопировал из решения.
+    // Но почему не появляется картинка булочек? А в решении появляется?
+    // третие задание так же скопировал, но эфекта 0. Что не так?
+    const productCopy = document.querySelector('.product').cloneNode(true);
+    productCopy
+      .querySelector('img')
+      .src = 'https://loremflickr.com/200/300/goods?lock=37';
 
-    // Обязательно указывать, что значение 50 должно быть в двойных кавычках?
-    // Как в html.
-
-    console.log(document.querySelector("[data-number='50']"))
+    // У меня вопрос. Почему после добавления этого кода, булочки
+    // появились?
+    productCopy.querySelector('.productName').textContent = 'Товар 4';
+    // метод добавления. Почему просто не проходит присваивание адресса
+    // картинки? Почему appendChild - работает не так?
+    // Но если копирнуть Ваше решение в 3 задание, все работает и с 
+    // appendChild
+    document.querySelector('.product:last-of-type').replaceWith(productCopy);
 
     /*
-    5. Выведите содержимое тега title в консоль.
+    5. По истечении 2 секунд с момента открытия страницы первый товар должен быть
+    удален из html.
      */
-
-    console.log(document.title);
-
-    /*
-    6. Получите элемент с классом "card-title" и выведите его родительский узел
-    в консоль.
-     */
-
-    console.log(document.querySelector(".card-title").parentNode);
-
-    /*
-    7. Создайте тег `p`, запишите внутри него текст "Привет" и добавьте созданный
-    тег в начало элемента, который имеет класс "card".
-     */
-
-    const elemCard = document.querySelector(".card");
-    elemCard.insertAdjacentHTML('afterbegin', '<p>Привет</p>');
-
-    /*
-    8. Удалите тег h6 на странице.
-     */
-    document.querySelector("h6").remove();
+    setTimeout(() => document.querySelector(".product").remove(), 2000);
 
   </script>
 </body>
