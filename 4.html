@@ -8,67 +8,37 @@
 
 <body>
   <!--
-Обязательное задание.
+Необязательное задание.
 
-1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна
-фотография используя метод filter. Исходные данные - массив products.
-2. Необходимо отсортировать массив products используя метод sort по цене,
-начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести
-отсортированный массив в консоль.
+Необходимо реализовать функцию-конструктор Rectangle.
 -->
   <script>
     "use strict";
 
-    const products = [
-      {
-        id: 3,
-        price: 127,
-        photos: [
-          "1.jpg",
-          "2.jpg",
-        ],
-      },
-      {
-        id: 5,
-        price: 499,
-        photos: [],
-      },
-      {
-        id: 10,
-        price: 26,
-        photos: [
-          "3.jpg",
-        ],
-      },
-      {
-        id: 8,
-        price: 78,
-      },
-    ];
+    /**
+     * Returns the rectangle object with width and height parameters and
+     * getArea() method.
+     *
+     * @param {number} width - Rectangle width
+     * @param {number} height - Rectangle height
+     * @return {Rectangle}
+     */
+    function Rectangle(width, height) {
+      this.width = width;
+      this.height = height;
+    }
+
+    Rectangle.prototype.getArea = function () {
+      return this.width * this.height;
+    }
 
 
-    //Если бы не пример решения, потратил бы не один вечер на понимание как это
-    //работает
 
-    console.log(products.filter(element => element.photos?.length));
-    products.sort((a, b) => a.price - b.price);
-    console.log(products);
 
-    // for (let i = 0; i < products.length; i++) {
-    //   if (!products[i].photos) {
-    //     console.log(`Имя свойства "photos" отсутствует в массиве с индексом
-    //     - "${i}"`);
-    //     continue;
-    //   } else if (!products[i].photos.length) {
-    //     console.log(`Массив родитель с индексом - "${i}",
-    //     не имеет значение в массиве фото`);
-    //   }
-    //   for (let b = 0; b < products[i].photos.length; b++) {
-
-    //     console.log(products[i].photos[b]);
-    //   }
-    // }
-
+    const r = new Rectangle(10, 20);
+    console.log(r.width); // 10
+    console.log(r.height); // 20
+    console.log(r.getArea()); // 200
   </script>
 </body>
 
