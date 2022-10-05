@@ -1,0 +1,351 @@
+*
+    margin: 0 auto
+    padding: 0 auto
+    box-sizing: border-box
+
+.container
+    margin: 0 auto
+    max-width: 1300px
+
+body
+    font-family: Lato
+
+@import header
+
+@import navi-trac
+
+@import karusel
+
+section.section_cart_product
+    margin: 0px 80px
+    transform: translateY(-40px)
+
+.card_product.container
+    display: flex
+    flex-direction: column
+    background-color: #ffffff
+    border: 1px solid #eaeaea
+    padding: 90px 0px 90px 0px
+
+h3.card_product_welcom
+    font-size: 14px
+    line-height: 24px
+    font-weight: 700
+    color: #f16d7f
+    max-width: 200px
+    padding-bottom: 15px
+
+.card_product_atributes_product
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    padding-bottom: 37px
+
+form.card_product_innervariable
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    padding-top: 67px
+    border-top: 1px solid #eaeaea
+
+p.innervariable_textname
+    display: flex
+    flex-direction: column
+    font-size: 14px
+    line-height: 24px
+    font-weight: 700
+    color: #2f2f2f
+    margin: 20px 0px 0px 0px
+
+button.submit_product
+    background-color: #ffffff
+    border: 1px solid #ef5b70
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    padding: 10px 30px 10px 30px
+
+button.submit_product:hover
+    background-color: #fdfdfd
+    border: 1px solid #e9455d
+    cursor: pointer
+
+p.text_button_copf
+    font-size: 16px
+    line-height: 1.7
+    font-weight: 700
+    color: #ef5b70
+    margin: 0px
+    padding-left: 15px
+
+img.icon_copf
+    margin: 0px
+
+select.body_color
+    font-size: 13px
+    line-height: 24px
+    font-weight: 400
+    color: #bcbcbc
+    margin: 16px 15px 0px 0px
+    padding: 5px 60px 5px 10px
+
+select.body_lengt
+    font-size: 13px
+    line-height: 24px
+    font-weight: 400
+    color: #bcbcbc
+    margin: 16px 15px 0px 0px
+    padding: 5px 60px 5px 10px
+
+::placeholder
+    color: #bcbcbc
+
+input.product_vivi
+    font-size: 14px
+    line-height: 24px
+    font-weight: 400
+    max-width: 130px
+    margin: 16px 10px 0px 0px
+    padding-left: 10px
+
+.card_box_selection
+    display: flex
+    flex-wrap: wrap
+    margin: 0px
+    justify-content: space-around
+    padding-bottom: 28px
+
+h2.card_product_namecolection
+    font-size: 18px
+    line-height: 24px
+    font-weight: 900
+    text-transform: uppercase
+    color: #4d4d4d
+    max-width: 400px
+    padding: 15px 0px 67px 0px
+
+hr.red_brij
+    margin: 0px 400px
+    border: 1px solid #eaeaea
+
+hr.gray_brij
+    margin: -3px 410px
+    border: 2px solid #ef5b70
+
+p.card_product_textproduct
+    font-size: 14px
+    line-height: 24px
+    font-weight: 300
+    color: #5e5e5e
+    max-width: 500px
+    padding-bottom: 28px
+
+p.atributes_product_text
+    font-size: 14px
+    line-height: 24px
+    font-weight: 700
+    color: #b9b9b9
+    margin: 0px
+    padding: 10px
+
+span.material_variable
+    color: #2f2f2f
+
+span.atribut_variable
+    color: #2f2f2f
+
+p.card_product_praise
+    font-size: 24px
+    line-height: 24px
+    font-weight: 700
+    color: #ef5b70
+    padding-bottom: 47px
+
+a.navgation_clik
+    font-weight: 700
+    color: #f16d7f
+
+nav.cardbar_card
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    padding: 0px 50px 0px 50px
+
+.cardbar_card_product
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    position: relative
+    margin: 0
+    padding: 0px 0px 30px 0px
+
+.box_media_card
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    position: relative
+    margin: 0
+
+.product_text
+    margin: 0px
+    padding: 15px 90px 10px 17px
+    font-size: 13px
+    line-height: 1.2
+    font-weight: 700
+    text-transform: uppercase
+    color: #222222
+    max-width: 261px
+
+    &_price
+        display: block
+        padding: 15px 0px 0px 0px
+        font-size: 16px
+        line-height: 1.2
+        font-weight: 700
+        text-transform: uppercase
+        color: #f16d7f
+
+.blackblok_button
+    display: none
+    position: absolute
+    z-index: 1
+    max-width: 120px
+    top: 120px
+    left: 70px
+    padding: 10px 10px 10px 10px
+    background-color: rgba(255, 255, 255, 0.0)
+    border: 1px solid #ffffff
+
+.cardbar_card_product:hover .poduct_image
+    filter: brightness(30%)
+
+.corp
+    padding-right: 5px
+    width: 25px
+    height: 20px
+
+    &_text
+        font-size: 13px
+        line-height: 1.2
+        font-weight: 700
+        color: #ffffff
+
+.cardbar_card_product:hover .product_text
+    background-color: #ffffff
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15)
+
+.cardbar_card_product:hover .blackblok
+    display: block
+    opacity: 50%
+
+.cardbar_header_megatex
+    font-size: 24px
+    line-height: 20px
+    font-weight: 900
+    text-transform: uppercase
+    color: #4d4d4d
+    padding: 119px 0px 72px 0px
+    text-align: center
+
+.cardbar_card_product:hover .blackblok_button
+    display: flex
+
+.blackblok_button:hover
+    box-shadow: 0px 12px 12px 10px rgba(255, 255, 255, 0.15)
+
+.cardbar_megabutton
+    display: block
+    position: relative
+    text-align: center
+    line-height: 70px
+    max-width: 250px
+    background-color: #f16d7f
+    margin: 50px 0px 150px 550px
+
+    &_text
+        font-size: 16px
+        line-height: 54px
+        font-weight: 700
+        letter-spacing: 0.025em
+        color: #ffffff
+        padding-right: 30px
+
+img.prevcard
+    position: absolute
+    top: 23px
+    left: 200px
+
+    &:hover
+        background-color: #ee5368
+
+.bannershot
+    display: flex
+    justify-content: center
+    padding-bottom: 100px
+
+.banner_image_sopf
+    position: relative
+    max-width: 767px
+    height: 529px
+    overflow: hidden
+    margin: 0px
+
+.banner_list
+    margin: 0px
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+
+p.banner_text
+    font-size: 20px
+    line-height: 1.2
+    font-weight: 700
+    letter-spacing: 0.025em
+    color: #fbfbfb
+    max-width: 250px
+
+span.text_info
+    display: block
+    font-size: 14px
+    line-height: 24px
+    font-weight: 300
+    letter-spacing: 0.025em
+    color: #fbfbfb
+
+.headerbanner
+    position: absolute
+    top: 130px
+    left: 50px
+
+    &_text
+        font-size: 53.7px
+        line-height: 1.2
+        font-weight: 700
+        letter-spacing: 0.025em
+        color: #ffffff
+
+span.text_color
+    color: #f16d7f
+
+span.text_stand
+    display: block
+    font-size: 32.2px
+
+.banner_mega_box
+    margin: 0px
+    display: flex
+    background-color: #222224
+    padding: 0px 30px 0px 20px
+
+.banner_imgicon
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    padding: 0px 10px 10px 0px
+
+.child1
+    border-bottom: 4px solid #f16d7f
+
+@import manage_list
+
+@import footer

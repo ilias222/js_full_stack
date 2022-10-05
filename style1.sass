@@ -1,0 +1,363 @@
+*
+    margin: 0 auto
+    padding: 0 auto
+    box-sizing: border-box
+
+.container
+    margin: 0 auto
+    max-width: 1300px
+
+body
+    font-family: Lato
+
+@import header
+
+.karusel
+    background-color: #e8e8e8
+
+    &_image_newimage
+        max-width: 100%
+
+nav.linerbar_list
+    position: relative
+
+.containerimage
+    position: relative
+
+.containertext
+    display: flex
+    position: absolute
+    padding: 200px 0px 0px 65px
+    font-size: 60px
+    line-height: 1.2
+    font-weight: 900
+    letter-spacing: 0.025em
+    color: #222222
+
+.karusel_image_text2
+    font-size: 40px
+
+.container_text_red
+    color: #f16d7f
+
+img.pupa
+    padding: 17px 15px 6px 0px
+
+.rubric
+    display: flex
+    align-items: center
+    margin-top: 70px
+    justify-content: center
+
+    &_party1
+        display: flex
+        flex-direction: column
+        margin: 0px
+        position: relative
+
+    &_party2
+        display: flex
+        flex-direction: column
+        margin: 0px
+        padding-left: 40px
+        position: relative
+
+    &_party_img
+        margin-bottom: 38px
+        position: relative
+        cursor: pointer
+
+    &_vidjets_man
+        z-index: 1
+        transform: translateY(20%)
+        position: absolute
+        margin: 20px 0px 0px 0px
+        font-size: 18px
+        line-height: 1.2
+        font-weight: 900
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        color: #222222
+        background-color: #ffffff
+        padding: 12px
+
+.vidjets_man_text
+    font-size: 30px
+    color: #f16d7f
+
+.rubric_party1__boxman:hover
+    opacity: 80%
+    cursor: pointer
+
+.rubric_party1__boxman:hover .rubric_vidjets_man
+    box-shadow: 5px 5px 5px #222222
+
+.rubric_party1__boxacsecssory:hover
+    opacity: 80%
+    cursor: pointer
+
+.rubric_party1__boxacsecssory:hover .rubric_vidjets_acsecssory
+    box-shadow: 5px 5px 5px #222222
+
+.rubric_party2__boxwoman:hover
+    opacity: 80%
+    cursor: pointer
+
+.rubric_party2__boxwoman:hover .rubric_vidjets_woman
+    box-shadow: 5px 5px 5px #222222
+
+.rubric_party2__boxkids:hover
+    opacity: 80%
+    cursor: pointer
+
+.rubric_party2__boxkids:hover .rubric_vidjets_kids
+    box-shadow: 5px 5px 5px #222222
+
+.rubric_vidjets_acsecssory
+    z-index: 1
+    transform: translateY(20%)
+    position: absolute
+    font-size: 18px
+    line-height: 1.2
+    font-weight: 900
+    text-transform: uppercase
+    letter-spacing: 0.025em
+    color: #222222
+    background-color: #ffffff
+    padding: 12px
+
+.vidjets_acsecssory_text
+    font-size: 30px
+    color: #f16d7f
+
+.rubric_vidjets_woman
+    z-index: 1
+    transform: translateY(20%)
+    position: absolute
+    font-size: 18px
+    line-height: 1.2
+    font-weight: 900
+    text-transform: uppercase
+    letter-spacing: 0.025em
+    color: #222222
+    background-color: #ffffff
+    padding: 12px
+    cursor: pointer
+
+.vidjets_woman_text
+    font-size: 30px
+    color: #f16d7f
+
+.rubric_vidjets_kids
+    z-index: 1
+    transform: translateY(20%)
+    position: absolute
+    font-family: Lato
+    font-size: 18px
+    line-height: 1.2
+    font-weight: 900
+    text-transform: uppercase
+    letter-spacing: 0.025em
+    color: #222222
+    background-color: #ffffff
+    padding: 12px
+
+.vidjets_kids_text
+    font-size: 30px
+    color: #f16d7f
+
+nav.cardbar_card
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    padding: 0px 50px 0px 50px
+
+.cardbar_card_product
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    position: relative
+    margin: 0
+    padding: 0px 0px 30px 0px
+
+.box_media_card
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    position: relative
+    margin: 0
+
+.product_text
+    margin: 0px
+    padding: 15px 90px 10px 17px
+    font-size: 13px
+    line-height: 1.2
+    font-weight: 700
+    text-transform: uppercase
+    color: #222222
+    max-width: 261px
+
+    &_price
+        display: block
+        padding: 15px 0px 0px 0px
+        font-size: 16px
+        line-height: 1.2
+        font-weight: 700
+        text-transform: uppercase
+        color: #f16d7f
+
+.blackblok_button
+    display: none
+    position: absolute
+    z-index: 1
+    max-width: 120px
+    top: 120px
+    left: 70px
+    padding: 10px 10px 10px 10px
+    background-color: rgba(255, 255, 255, 0.0)
+    border: 1px solid #ffffff
+
+.cardbar_card_product:hover .poduct_image
+    filter: brightness(30%)
+
+.corp
+    padding-right: 5px
+    width: 25px
+    height: 20px
+
+    &_text
+        font-size: 13px
+        line-height: 1.2
+        font-weight: 700
+        color: #ffffff
+
+.cardbar_card_product:hover .product_text
+    background-color: #ffffff
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15)
+
+.cardbar_card_product:hover .blackblok
+    display: block
+    opacity: 50%
+
+span.cardbar_header_itemtext
+    display: block
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.025em
+    color: #9f9f9f
+
+p.cardbar_header_megatex
+    text-align: center
+    max-width: 400px
+    font-size: 30px
+    font-weight: 700
+    letter-spacing: 0.025em
+    color: #222222
+    padding: 80px 0px 60px 0px
+
+.cardbar_card_product:hover .blackblok_button
+    display: flex
+
+.blackblok_button:hover
+    box-shadow: 0px 12px 12px 10px rgba(255, 255, 255, 0.15)
+
+.cardbar_megabutton
+    display: block
+    position: relative
+    text-align: center
+    line-height: 70px
+    max-width: 250px
+    background-color: #f16d7f
+    margin: 50px 0px 150px 550px
+
+    &_text
+        font-size: 16px
+        line-height: 54px
+        font-weight: 700
+        letter-spacing: 0.025em
+        color: #ffffff
+        padding-right: 30px
+
+.cardbar_megabutton:hover
+    background-color: #eb5266
+    cursor: pointer
+
+img.prevcard
+    position: absolute
+    top: 23px
+    left: 200px
+
+    &:hover
+        background-color: #ee5368
+
+.bannershot
+    display: flex
+    justify-content: center
+    padding-bottom: 100px
+
+.banner_image_sopf
+    position: relative
+    max-width: 767px
+    height: 529px
+    overflow: hidden
+    margin: 0px
+
+.banner_list
+    margin: 0px
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+
+p.banner_text
+    font-size: 20px
+    line-height: 1.2
+    font-weight: 700
+    letter-spacing: 0.025em
+    color: #fbfbfb
+    max-width: 250px
+
+span.text_info
+    display: block
+    font-size: 14px
+    line-height: 24px
+    font-weight: 300
+    letter-spacing: 0.025em
+    color: #fbfbfb
+
+.headerbanner
+    position: absolute
+    top: 130px
+    left: 50px
+
+    &_text
+        font-size: 53.7px
+        line-height: 1.2
+        font-weight: 700
+        letter-spacing: 0.025em
+        color: #ffffff
+
+span.text_color
+    color: #f16d7f
+
+span.text_stand
+    display: block
+    font-size: 32.2px
+
+.banner_mega_box
+    margin: 0px
+    display: flex
+    background-color: #222224
+    padding: 0px 30px 0px 20px
+
+.banner_imgicon
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    padding: 0px 10px 10px 0px
+
+.child1
+    border-bottom: 4px solid #f16d7f
+
+@import manage_list
+
+@import footer
