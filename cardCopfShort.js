@@ -8,9 +8,13 @@
 let numberLoop = 0;
 let numberProduct = 0;
 let callProduct = 0;
+let loopMin = 1;
+
 let listCheckout = [];
 const parEl = document.querySelector('.numberLoop');
 const divEl = document.querySelectorAll('.blackblok_button');
+const productsEl = document.querySelector('.mini_box');
+const totalPrice = document.querySelector('.price_full');
 
 class ProductCard {
     constructor(product, praise, popular, img) {
@@ -30,13 +34,14 @@ class ProductCard {
         <img src="${this.popular}.png" alt="" class="like_img_box">
         <label class="label_call_copf">
         <span>Call :</span>
-        <input type="number" class="copf_card_call" disabled id="${this.img}"
+        <input type="number" data-inpat="${this.img}" class="copf_card_call" 
          value="1">
         </label>
-        <p class="like_price_text ${this.img}">${this.praise}$</p>
+        <p class="like_price_text ${this.img}" ">${this.praise}$</p>
         </div>
         <div class="delete_copf_card">
         <img src="delete.png" alt="" class="delete_copf_img">
+        </div>
         </div>
       `;
     }
@@ -54,8 +59,7 @@ const products =
     card8: [new ProductCard("Product text", 52, "like", "card8")],
 }
 
-const productsEl = document.querySelector('.mini_box');
-const totalPrice = document.querySelector('.price_full');
+
 document.querySelector('.cardbar_card').addEventListener('click', event => {
     let listPrice = null;
     if (listCheckout.indexOf(event.target.dataset.type) < 0) {
@@ -76,7 +80,47 @@ document.querySelector('.cardbar_card').addEventListener('click', event => {
             .textContent);
     document.querySelector('.' + event.target.dataset.type).textContent =
         `${(loopPriceCard / (callProduct - 1)) * callProduct}$`;
+
+
     totalPriceCrosCard();
+});
+
+// удаление позиции в листе корзины
+document.querySelector('.mini_box').addEventListener('click', nt => {
+    document.querySelectorAll('.copf_img_box').forEach(evet => {
+        evet.querySelector('.delete_copf_img').addEventListener('click', event => {
+            let arrCard = evet.querySelector('.copf_card_call');
+            delete listCheckout[listCheckout.indexOf(arrCard.id)];
+            parEl.textContent--;
+            if (parEl.textContent < 0) {
+                parEl.textContent = 0;
+            }
+            evet.remove();
+            totalPriceCrosCard();
+        })
+    })
+});
+
+// Ручной ввод количества позиции в корзине
+productsEl.addEventListener('input', event => {
+
+    let priceLite = productsEl.querySelector('.' + event.target.dataset.inpat);
+    let prisert = parseInt(event.target.value);
+    let uanProduct = parseInt(priceLite.textContent) / (parseInt(event.target.value) - 1);
+
+    if (prisert < 1) {
+        event.target.value = 1;
+        priceLite.textContent = `${products[event.target.dataset.inpat][0].praise}$`;
+        totalPriceCrosCard();
+        return;
+    }
+    if (uanProduct != products[event.target.dataset.inpat][0].praise) {
+        priceLite.textContent = `${(parseInt(priceLite.textContent) / (prisert + 1)) * prisert}$`;
+        totalPriceCrosCard();
+    } else {
+        priceLite.textContent = `${(parseInt(priceLite.textContent) / (event.target.value - 1) * event.target.value)}$`;
+        totalPriceCrosCard();
+    }
 });
 
 /**
