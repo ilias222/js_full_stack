@@ -34,7 +34,7 @@ class ProductCard {
         <img src="${this.popular}.png" alt="" class="like_img_box">
         <label class="label_call_copf">
         <span>Call :</span>
-        <input type="number" data-inpat="${this.img}" class="copf_card_call" 
+        <input type="number" data-inpat="${this.img}" id="${this.img}" class="copf_card_call" 
          value="1">
         </label>
         <p class="like_price_text ${this.img}" ">${this.praise}$</p>
@@ -61,7 +61,7 @@ const products =
 
 
 document.querySelector('.cardbar_card').addEventListener('click', event => {
-    let listPrice = null;
+    // Запуск при создании карты в корзине
     if (listCheckout.indexOf(event.target.dataset.type) < 0) {
 
         listCheckout[numberProduct++] = event.target.dataset.type;
@@ -73,6 +73,8 @@ document.querySelector('.cardbar_card').addEventListener('click', event => {
                 .textContent)}$`;
         return;
     }
+    // Запуск при последущем клике на кнопке - добавить в корзину, 
+    // если карта уже есть в корзине
     let callProduct =
         ++document.querySelector("#" + event.target.dataset.type).value;
     let loopPriceCard =
@@ -86,14 +88,16 @@ document.querySelector('.cardbar_card').addEventListener('click', event => {
 });
 
 // удаление позиции в листе корзины
-document.querySelector('.mini_box').addEventListener('click', nt => {
+document.querySelector('.mini_box').addEventListener('mouseover', nt => {
     document.querySelectorAll('.copf_img_box').forEach(evet => {
         evet.querySelector('.delete_copf_img').addEventListener('click', event => {
             let arrCard = evet.querySelector('.copf_card_call');
             delete listCheckout[listCheckout.indexOf(arrCard.id)];
             parEl.textContent--;
+            --numberLoop;
             if (parEl.textContent < 0) {
                 parEl.textContent = 0;
+                numberLoop = 0;
             }
             evet.remove();
             totalPriceCrosCard();

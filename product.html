@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mediastyle.css">
-    <script src="karusel01.js"></script>
     <title>Document</title>
 </head>
 
@@ -819,29 +818,43 @@
     <div class="botom_and_linernummer container">
         <div class="linernummer">
             <div class="linernummer_prev">
-                <p class="_prev_page"> <a href="#" class="_prev_page_link">
+                <p class="_prev_page"> <a class="_prev_page_link">
                         < </a>
                 </p>
             </div>
             <div class="_numerpag">
                 <ol class="_numerpgge_index">
-                    <li class="_numerpgge_index_item"><a href="#" class="_numerpagge_index_item_link">1</a></li>
-                    <li class="_numerpgge_index_item"><a href="#" class="_numerpagge_index_item_link">2</a></li>
-                    <li class="_numerpgge_index_item"><a href="#" class="_numerpagge_index_item_link">3</a></li>
-                    <li class="_numerpgge_index_item"><a href="#" class="_numerpagge_index_item_link">4</a></li>
-                    <li class="_numerpgge_index_item amore"><a href="#" class="_numerpagge_index_item_link">...</a>
+                    <li class="_numerpgge_index_item amore prevAmore">
+                        <p>...</p>
                     </li>
-                    <li class="_numerpgge_index_item"><a href="#" class="_numerpagge_index_item_link">20</a></li>
+                    <li class="_numerpgge_index_item">
+                        <p class="_numerpagge_index_item_link num1 rows rosse">1</p>
+                    </li>
+                    <li class="_numerpgge_index_item">
+                        <p class="_numerpagge_index_item_link rows num2">2</p>
+                    </li>
+                    <li class="_numerpgge_index_item">
+                        <p class="_numerpagge_index_item_link rows num3">3</p>
+                    </li>
+                    <li class="_numerpgge_index_item">
+                        <p class="_numerpagge_index_item_link rows num4">4</p>
+                    </li>
+                    <li class="_numerpgge_index_item amore">
+                        <p>...</p>
+                    </li>
+                    <li class="_numerpgge_index_item">
+                        <p class="_numerpagge_index_item_link rows num20">20</p>
+                    </li>
                 </ol>
             </div>
             <div class="linernummer_next">
                 <p class="_next_page">
-                    <a href="#" class="_prev_page_link">></a>
+                    <a class="_next_page_link">></a>
                 </p>
             </div>
         </div>
         <div class="bottom_bloc">
-            <bottom class="brovse_add" onclick="alert('Clik')">View All</bottom>
+            <bottom class="brovse_add">View All</bottom>
         </div>
     </div>
 
@@ -977,6 +990,8 @@
 
     <script src="cardCopfShort.js"></script>
     <script src="sortCopf.js"></script>
+    <script src="cardVievChek.js"></script>
+    <script src="cropting.js"></script>
 </body>
 
 </html>

@@ -279,6 +279,7 @@ a._numerpagge_index_item_link
 
 ._numerpag
     display: flex
+    min-width: 250px
     margin: 0px
 
 .linernummer_prev
@@ -295,6 +296,8 @@ a._prev_page_link
 ._numerpgge_index
     list-style: none
     display: flex
+    justify-content: space-between
+    width: 100%
     margin: 0px
     padding: 0px
     margin: 0px
@@ -302,12 +305,17 @@ a._prev_page_link
 ._numerpagge_index_item_link:hover
     color: #ef5b70
 
+.rosse
+    color: #ef5b70
+    text-decoration: underline
+
 ._prev_page_link:hover
     color: #ef5b70
 
 .linernummer
     display: flex
-    max-width: 261px
+    justify-content: space-between
+    min-width: 350px
     background-color: #ffffff
     border: 1px solid #ebebeb
     margin: 0px 0px 0px 325px
@@ -536,7 +544,7 @@ section.option_card_filter
     font-weight: 700
     text-transform: uppercase
     color: #222222
-    max-width: 261px
+    min-width: 261px
 
     &_price
         display: block
