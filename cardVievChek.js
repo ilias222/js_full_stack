@@ -25,6 +25,22 @@ class ProductViev {
     }
 }
 
+class CardViev {
+    static getVievCardWindow() {
+        for (let card in cardViev) {
+            document.querySelector('.cardbar_card').insertAdjacentHTML('beforeend', cardViev[card].map(cardVi => cardVi.getProductViev()));
+        }
+    }
+}
+
+class VievMain {
+    static runViev() {
+        document.querySelector('.brovse_add').addEventListener('click', elem => {
+            CardViev.getVievCardWindow();
+        });
+    }
+}
+
 const cardViev =
 {
     card1: [new ProductViev("Product text", 52.00, "card1")],
@@ -37,8 +53,4 @@ const cardViev =
     card8: [new ProductViev("Product text", 52.00, "card8")],
 }
 
-document.querySelector('.brovse_add').addEventListener('click', elem => {
-    for (card in cardViev) {
-        document.querySelector('.cardbar_card').insertAdjacentHTML('beforeend', cardViev[card].map(cardVi => cardVi.getProductViev()));
-    }
-});
+VievMain.runViev();
