@@ -1,0 +1,44 @@
+{
+    "cardViev1":{
+    "card0":{
+        "product": "Product text",
+        "praise": 52.00,
+        "img":"card1"
+    },
+    "card1":{
+        "product": "Product text",
+        "praise": 511.00,
+         "img":"card2"
+    },
+    "card2":{
+        "product": "Product text",
+        "praise": 12.00,
+        "img":"card3"
+    },
+    "card3":{
+        "product": "Product text",
+        "praise": 222.00,
+        "img":"card4"
+    },
+    "card4":{
+        "product": "Product text",
+        "praise": 555.00,
+        "img":"card5"
+    },
+    "card5":{
+        "product": "Product text",
+        "praise": 52.00,
+        "img":"card6"
+    },
+    "card6":{
+        "product": "Product text",
+        "praise": 52.00,
+        "img":"card7"
+    },
+    "card7":{
+        "product": "Product text",
+        "praise": 52.00,
+        "img":"card8"
+    }
+}
+}

@@ -26,31 +26,22 @@ class ProductViev {
 }
 
 class CardViev {
-    static getVievCardWindow() {
-        for (let card in cardViev) {
-            document.querySelector('.cardbar_card').insertAdjacentHTML('beforeend', cardViev[card].map(cardVi => cardVi.getProductViev()));
-        }
+    static getVievCardWindow(card) {
+            document.querySelector('.cardbar_card').insertAdjacentHTML('beforeend', card.getProductViev());
     }
 }
 
 class VievMain {
     static runViev() {
         document.querySelector('.brovse_add').addEventListener('click', elem => {
-            CardViev.getVievCardWindow();
+            fetch('card_list.json').then(text => text.json()).then(data => {
+                        let arra = (data.cardViev1);
+                        for (let i in arra){
+                            CardViev.getVievCardWindow(new ProductViev(arra[i].product,arra[i].praise,arra[i].img));
+                        }        
+            });
         });
     }
-}
-
-const cardViev =
-{
-    card1: [new ProductViev("Product text", 52.00, "card1")],
-    card2: [new ProductViev("Product text", 52.00, "card2")],
-    card3: [new ProductViev("Product text", 52.00, "card3")],
-    card4: [new ProductViev("Product text", 52.00, "card4")],
-    card5: [new ProductViev("Product text", 52.00, "card5")],
-    card6: [new ProductViev("Product text", 52.00, "card6")],
-    card7: [new ProductViev("Product text", 52.00, "card7")],
-    card8: [new ProductViev("Product text", 52.00, "card8")],
 }
 
 VievMain.runViev();
