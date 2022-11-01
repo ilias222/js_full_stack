@@ -34,7 +34,7 @@ class CardViev {
 class VievMain {
     static runViev() {
         document.querySelector('.brovse_add').addEventListener('click', elem => {
-            fetch('card_list.json').then(text => text.json()).then(data => {
+            fetch('https://raw.githubusercontent.com/ilias222/js_full_stack/efdd346f27b67a998205d35458b4c5c9e1d94c5e/card_list.json').then(text => text.json()).then(data => {
                         let arra = (data.cardViev1);
                         for (let i in arra){
                             CardViev.getVievCardWindow(new ProductViev(arra[i].product,arra[i].praise,arra[i].img));

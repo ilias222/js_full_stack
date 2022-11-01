@@ -15,6 +15,7 @@ const parEl = document.querySelector('.numberLoop');
 const divEl = document.querySelectorAll('.blackblok_button');
 const productsEl = document.querySelector('.mini_box');
 const totalPrice = document.querySelector('.price_full');
+let arrayLite = [];
 
 
 class ProductCard {
@@ -42,7 +43,7 @@ class ProductCard {
         <p class="like_price_text ${this.img}" ">${this.praise}$</p>
         </div>
         <div class="delete_copf_card">
-        <img src="delete.png" alt="" class="delete_copf_img ${this.id}">
+        <img src="delete.png" alt="" class="delete_copf_img ${this.img} ${this.id}">
         </div>
         </div>
       `;
@@ -57,12 +58,16 @@ class CopfInnerHtml {
      * @param {*} ev - элемент события 
      * @returns - не возвращает ничего
      */
-    static getProductHtmlCopf(ev) {
+    static getProductHtmlCopf(ev, arr) {
+        arrayLite = arr;
         if (listCheckout.indexOf(ev.target.dataset.type) < 0) {
-
             listCheckout[numberProduct++] = ev.target.dataset.type;
-            productsEl.insertAdjacentHTML('beforeend', products[ev.target
-                .dataset.type].map(product => product.getProductMarkup()));
+            productsEl.insertAdjacentHTML('beforeend', new ProductCard(arr[ev.target
+                .dataset.type].product, arr[ev.target
+                    .dataset.type].praise, arr[ev.target
+                        .dataset.type].like, arr[ev.target
+                        .dataset.type].img, arr[ev.target
+                            .dataset.type].id).getProductMarkup());
             parEl.textContent = ++numberLoop;
             totalPrice.textContent = `${parseInt(totalPrice.textContent)
                 + parseInt(document.querySelector('.' + ev.target.dataset.type)
@@ -85,12 +90,14 @@ class CopfInnerHtml {
      */
     static getCopfDelite(even) {
         if (even.target.classList[0] == 'delete_copf_img') {
-            document.querySelector('div.' + even.target.classList[1]).remove();
+            document.querySelector('.'+ even.target.classList[2]).remove();
             numberLoop--;
             parEl.textContent = numberLoop;
+            let noCard = listCheckout.indexOf(even.target.classList[1]);
+            delete listCheckout[noCard];
         }
         totalPriceCrosCard();
-
+       
     }
     // Метод добавления количества товара в корзине, выбераемого руками
     static getCallCard(ev) {
@@ -100,27 +107,32 @@ class CopfInnerHtml {
 
         if (prisert < 1) {
             ev.target.value = 1;
-            priceLite.textContent = `${products[ev.target.dataset.inpat][0].praise}$`;
+            priceLite.textContent = `${arrayLite[ev.target.dataset.inpat].praise}$`;
             totalPriceCrosCard();
             return;
         }
-        if (uanProduct != products[ev.target.dataset.inpat][0].praise) {
+        if (uanProduct != arrayLite[ev.target.dataset.inpat].praise) {
             priceLite.textContent = `${(parseInt(priceLite.textContent) / (prisert + 1)) * prisert}$`;
             totalPriceCrosCard();
         } else {
-            priceLite.textContent = `${(parseInt(priceLite.textContent) / (event.target.value - 1) * ev.target.value)}$`;
-            totalPriceCrosCard();
+            priceLite.textContent = `${(parseInt(priceLite.textContent) / (ev.target.value - 1) * ev.target.value)}$`;
+           totalPriceCrosCard();
         }
     }
 
 
 }
 
+
+
 class Main {
     static run() {
         document.querySelector('.cardbar_card').addEventListener('click', event => {
             // Запуск при создании карты в корзине
-            CopfInnerHtml.getProductHtmlCopf(event);
+            fetch('https://raw.githubusercontent.com/ilias222/js_full_stack/efdd346f27b67a998205d35458b4c5c9e1d94c5e/card_list.json').then(text => text.json()).then(data => {
+                        let arra = (data.cardViev1);
+                        CopfInnerHtml.getProductHtmlCopf(event, arra);
+            });
         });
 
         // удаление позиции в листе корзины
@@ -151,18 +163,6 @@ function totalPriceCrosCard() {
         visible += parseInt(prai.textContent);
     });
     totalPrice.textContent = `${visible}$`;
-}
-// мини база
-const products =
-{
-    card1: [new ProductCard("Product text", 52, "like", "card1", "card01")],
-    card2: [new ProductCard("Product text", 52, "like", "card2", "card02")],
-    card3: [new ProductCard("Product text", 52, "like", "card3", "card03")],
-    card4: [new ProductCard("Product text", 52, "like", "card4", "card04")],
-    card5: [new ProductCard("Product text", 52, "like", "card5", "card05")],
-    card6: [new ProductCard("Product text", 52, "like", "card6", "card06")],
-    card7: [new ProductCard("Product text", 52, "like", "card7", "card07")],
-    card8: [new ProductCard("Product text", 52, "like", "card8", "card08")],
 }
 
 // Запускаем
