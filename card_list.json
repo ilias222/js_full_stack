@@ -3,42 +3,117 @@
     "card0":{
         "product": "Product text",
         "praise": 52.00,
-        "img":"card1"
+        "like": "like",
+        "img":"card0",
+        "id": "card01"
     },
     "card1":{
         "product": "Product text",
         "praise": 511.00,
-         "img":"card2"
+        "like": "like",
+         "img":"card1",
+         "id": "card02"
     },
     "card2":{
         "product": "Product text",
         "praise": 12.00,
-        "img":"card3"
+        "like": "like",
+        "img":"card2",
+        "id": "card03"
     },
     "card3":{
         "product": "Product text",
         "praise": 222.00,
-        "img":"card4"
+        "like": "like",
+        "img":"card3",
+        "id": "card04"
     },
     "card4":{
         "product": "Product text",
         "praise": 555.00,
-        "img":"card5"
+        "like": "like",
+        "img":"card4",
+        "id": "card05"
     },
     "card5":{
         "product": "Product text",
         "praise": 52.00,
-        "img":"card6"
+        "like": "like",
+        "img":"card5",
+        "id": "card06"
     },
     "card6":{
         "product": "Product text",
         "praise": 52.00,
-        "img":"card7"
+        "like": "like",
+        "img":"card6",
+        "id": "card07"
     },
     "card7":{
         "product": "Product text",
         "praise": 52.00,
-        "img":"card8"
+        "like": "like",
+        "img":"card7",
+        "id": "card08"
     }
-}
+},
+    "cardViev2":{
+        "card0":{
+            "product": "Product text",
+            "praise": 52.00,
+            "like": "like",
+            "img":"card0",
+            "id": "card01"
+        },
+        "card2":{
+            "product": "Product text",
+            "praise": 12.00,
+            "like": "like",
+            "img":"card2",
+            "id": "card03"
+        },
+        "card1":{
+            "product": "Product text",
+            "praise": 511.00,
+            "like": "like",
+            "img":"card1",
+            "id": "card02"
+        },
+        "card4":{
+            "product": "Product text",
+            "praise": 555.00,
+            "like": "like",
+            "img":"card4",
+            "id": "card05"
+        },
+        "card3":{
+            "product": "Product text",
+            "praise": 222.00,
+            "like": "like",
+            "img":"card3",
+            "id": "card04"
+        },
+        "card5":{
+            "product": "Product text",
+            "praise": 52.00,
+            "like": "like",
+            "img":"card5",
+            "id": "card06"
+        },
+        "card7":{
+            "product": "Product text",
+            "praise": 52.00,
+            "like": "like",
+            "img":"card7",
+            "id": "card08"
+        },
+        "card6":{
+            "product": "Product text",
+            "praise": 52.00,
+            "like": "like",
+            "img":"card6",
+            "id": "card07"
+        }
+    
+    }
 }
