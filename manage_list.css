@@ -1,11 +1,7 @@
 .manage_boxcontent {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 130px 110px 0px 110px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .manage_list {
@@ -18,8 +14,6 @@
 }
 
 .manage_monolog {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0px;
 }
@@ -65,12 +59,8 @@ form.manage_submit {
   border-radius: 23px;
   width: 334px;
   height: 46px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
 }
 
 input.manage_list_email {
@@ -110,22 +100,12 @@ p.button_submit_text {
 }
 
 .manage_list_email {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .manage_list_email_megatxt {
   font-size: 24px;
   font-weight: 400;
@@ -145,11 +125,8 @@ span.megatext {
 }
 
 .manage_point_image {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   max-width: 350px;
   margin: 0px;
   padding: 30px 0px 0px 225px;
-}
-/*# sourceMappingURL=manage_list.css.map */
+}/*# sourceMappingURL=manage_list.css.map */

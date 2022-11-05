@@ -129,7 +129,7 @@ class Main {
     static run() {
         document.querySelector('.cardbar_card').addEventListener('click', event => {
             // Запуск при создании карты в корзине
-            fetch('https://raw.githubusercontent.com/ilias222/js_full_stack/efdd346f27b67a998205d35458b4c5c9e1d94c5e/card_list.json').then(text => text.json()).then(data => {
+            fetch('https://raw.githubusercontent.com/ilias222/js_full_stack/lessen1/card_list.json').then(text => text.json()).then(data => {
                         let arra = (data.cardViev1);
                         CopfInnerHtml.getProductHtmlCopf(event, arra);
             });

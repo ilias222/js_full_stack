@@ -611,18 +611,28 @@
                                     class="cheking_accordeont__linner_box_form__text-input-right__item-label">
                                     EMAIL ADDRESS
                                     <em>*</em>
+                                    <div class="modalWindowErrorEmail">
+                                        <p class="modalWindowErrorEmail_text">
+                                            Формат адреса почты: <br> NameUser@NamePost.NameDomain
+                                        </p>
+                                    </div>
                                 </label>
                                 <input type="email" id="email"
-                                    class="cheking_accordeont__linner_box_form__text-input-right__item-input"
+                                    class="cheking_accordeont__linner_box_form__text-input-right__item-input email errorFormat"
                                     placeholder="Email@" autofocus required pattern="[@]">
 
                                 <label for="password"
                                     class="cheking_accordeont__linner_box_form__text-input-right__item-label">
                                     PASSWORD
                                     <em>*</em>
+                                    <div class="modalWindowErrorPasword">
+                                        <p class="modalWindowErrorPasword_text">
+                                            Формат пароля: Не менее 6 символов
+                                        </p>
+                                    </div>
                                 </label>
                                 <input type="password" id="password"
-                                    class="cheking_accordeont__linner_box_form__text-input-right__item-input"
+                                    class="cheking_accordeont__linner_box_form__text-input-right__item-input password errorFormat"
                                     placeholder="Password" required>
                                 <p class="cheking_accordeont__linner_box_form__text-input-right__text-warning">
                                     * Required Fileds
@@ -1319,7 +1329,7 @@
             </div>
         </div>
     </div>
-
+<script src="securityReg.js"></script>
 </body>
 
 </html>

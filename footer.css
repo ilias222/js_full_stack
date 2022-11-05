@@ -1,11 +1,6 @@
 .footer_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   max-width: 370px;
   margin: 0px;
   font-size: 14px;
@@ -15,12 +10,10 @@
   color: #898989;
   margin-right: 70px;
 }
-
 .footer_text_text1 {
   padding: 30px 0px 20px 0px;
   margin-top: 0px;
 }
-
 .footer_text_text2 {
   margin: 0px;
 }
@@ -58,22 +51,15 @@ a.list_link_press {
 }
 
 nav.footer_nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   margin: 0px;
   padding-top: 100px;
 }
 
 .mega_footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding-left: 120px;
 }
 
@@ -81,14 +67,9 @@ nav.footer_nav {
   background-color: #e6e6e6;
   margin-top: 100px;
 }
-
 .footer_mesenger_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .footer_mesenger_icon {
@@ -107,7 +88,6 @@ p.copyrait {
   color: #7a7a7a;
   margin: 0px;
 }
-
 p.copyrait_icon {
   padding-top: 5px;
   margin: 0px;
@@ -127,16 +107,9 @@ p.header_list_menu_item {
 }
 
 .linnerbar_list_menu_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 10px 10px 0px 10px;
 }
 
@@ -166,16 +139,9 @@ a.link_menu_item2 {
 }
 
 .list_menu_item_infobox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-evenly;
   margin-bottom: 20px;
 }
 
@@ -196,22 +162,13 @@ button.button_header_box {
 }
 
 li.meny_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 li.menu_item_link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 a.chekout {
@@ -225,18 +182,10 @@ a.chekout {
   border: 1px solid #f16d7f;
   margin-top: 30px;
 }
-
 a.chekout_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
   padding-right: 20px;
 }
 
@@ -249,15 +198,12 @@ a.chekout_item {
   position: absolute;
   top: -5px;
   left: 20px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   border-top: 1px solid #F9F9F8;
   border-left: 1px solid #f9f9f9;
 }
 
 .linnerbar_list_items_child:hover .linnerbar_list_menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -265,23 +211,16 @@ a.chekout_item {
   right: 0px;
   left: auto;
 }
-
 .last:hover .last:hover .linnerbar_list_menu {
   left: 650px;
 }
 
 .header_inputs_buttonlist:hover .linnerbar_list_menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   top: 35px;
   left: 0px;
 }
-
 .header_inputs_buttonlist:hover .header_inputs_buttonlist:hover .linnerbar_list_menu {
   left: 60px;
 }
@@ -291,8 +230,6 @@ li.menu_item {
 }
 
 .header_bar_buttonlist:hover .linnerbar_list_menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   top: 35px;
   left: 0px;
@@ -304,8 +241,6 @@ li.menu_item {
 }
 
 .header_bar_buttonlist:hover .li.menu_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -323,5 +258,4 @@ i.fa-brands:hover {
 
 .list_link:hover .list_link_press {
   color: #f16d7f;
-}
-/*# sourceMappingURL=footer.css.map */
+}/*# sourceMappingURL=footer.css.map */

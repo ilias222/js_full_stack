@@ -3,14 +3,9 @@ section.section_navigation_bloc {
 }
 
 .navigation_blok {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .navigation_blok_position {
   margin: 0px;
   font-size: 24px;
@@ -23,13 +18,9 @@ section.section_navigation_bloc {
 }
 
 .navigation_tracer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-right: 110px;
 }
 
@@ -64,5 +55,4 @@ p.navigation_brij {
   font-weight: 300;
   text-transform: uppercase;
   color: #636363;
-}
-/*# sourceMappingURL=navi-trac.css.map */
+}/*# sourceMappingURL=navi-trac.css.map */
