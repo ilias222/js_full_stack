@@ -86,6 +86,7 @@ class InpUselWindow {
         if (text == ''){
             modalWin.innerHTML = "";
             modalWin.style = "display: none;";
+            PageSortMain.runViev();
             return;
         }
         modalWin.innerHTML ='';
