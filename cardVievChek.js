@@ -45,5 +45,3 @@ class VievMain {
 }
 
 VievMain.runViev();
-
-console.log('ki');

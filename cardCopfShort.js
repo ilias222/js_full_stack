@@ -3,6 +3,7 @@
 корзины. Так же ведет подсчет стоимости товара и его количества.
 */
 
+console.log('ki');
 
 let numberLoop = 0;
 let numberProduct = 0;
@@ -126,6 +127,7 @@ class CopfInnerHtml {
 
 class Main {
     static run() {
+        console.log( document.querySelector('.cardbar_card'));
         document.querySelector('.cardbar_card').addEventListener('click', event => {
             // Запуск при создании карты в корзине
             fetch('https://raw.githubusercontent.com/ilias222/js_full_stack/lessen1/card_list.json').then(text => text.json()).then(data => {
@@ -166,5 +168,4 @@ function totalPriceCrosCard() {
 
 // Запускаем
 Main.run();
-
 
