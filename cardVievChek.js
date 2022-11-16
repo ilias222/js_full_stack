@@ -8,7 +8,7 @@ class ProductViev {
         this.praise = praise;
         this.img = img;
     }
-    getProductViev() {
+     getProductViev() {
         return `
         <div class="cardbar_card_product ${this.img}">
                     <div class="blackblok_button" data-type="${this.img}">
@@ -45,3 +45,5 @@ class VievMain {
 }
 
 VievMain.runViev();
+
+console.log('ki');

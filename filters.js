@@ -65,17 +65,24 @@ class InpUselWindow {
         InpUselWindow.optionsJsonList(arr);
         let arrayUsertext = []; 
         InpUselWindow.inspectArr(arrayCard);
+        let inputText = InpUselWindow.inspectUserText(textUser);
         for(let i = 0; i < collList; i++){
             for(let a = 0; a < arrCollCard[i]; a++){
                 nameProdukt = arr[i][`card${a}`].product;
-                if(nameProdukt.indexOf(textUser) >= 0){ 
+                if(nameProdukt.indexOf(inputText) >= 0){ 
                     arrayUsertext.push([arr[i][`card${a}`].product]);
                     arrayCard.push(arr[i][`card${a}`]);
                 }
             }
         }
-        InpUselWindow.getScrolUserText(arrayUsertext, textUser);
+        InpUselWindow.getScrolUserText(arrayUsertext, inputText);
     }
+
+    static inspectUserText(usText){
+        usText = usText.replace(/^[а-яё]/gi, u => u.toUpperCase());
+        return usText;
+    }
+
     // Инспектор массивов - при наличии элементов, обнуляет их
     static inspectArr (arr){
         arr.length = 0;

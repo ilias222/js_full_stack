@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    <section class="vuePa" id="app">
     <div class="header">
         <div class="container">
             <div class="header_logoinputs">
@@ -60,18 +59,13 @@
                                 </div>
                             </div>
                         </button>
-                        <template> 
                         <form action="" class="header_inputs_formbar">
-                            
-                                <input type="text" class="header_inputs_innertext" id="header_innertext"
-                                    placeholder="Search for Item..." autocomplete="off"
-                                    v-on:input = "getInputUserText(allValuesgoods, $event.target.value)">
-                                <img src="glass.png" alt="Glass" class="header_inputs_imgglass" v-on:click = "setCardWindowUserFilter(arrayCard)">
+                            <input type="text" class="header_inputs_innertext" id="header_innertext"
+                                placeholder="Search for Item..." autocomplete="off">
+                            <img src="glass.png" alt="Glass" class="header_inputs_imgglass">
                         </form>
-                        
-                        <div class = "window_user_text" v-on:click = "setCardWindowUserFilter(arrayCard, $event.target.textContent)">
+                        <div class = "window_user_text">
                         </div>
-                    </template>
                     </div>
                 </div>
                 <div class="header_logoinputs__box">
@@ -84,26 +78,6 @@
                             <div class="menu_list_box">
                                 <div class="mega_box_menu_item"></div>
                                 <div class="mini_box">
-                                    <template > 
-                                        <div :class="`copf_img_box ${item.id}`" v-for="item of arrayLite">
-                                            <div class="img_list_box">
-                                            <img :src="`${item.img}.png`" alt="" class="copf_box">
-                                            </div>
-                                            <div class="price_info">
-                                            <p class="text_copf">{{item.product}}</p>
-                                            <img :src="`${item.like}.png`" alt="" class="like_img_box">
-                                            <label class="label_call_copf">
-                                            <span>Call :</span>
-                                            <input type="number" v-on:input="getCallCard($event)" :data-inpat="item.img" :id="item.img" class="copf_card_call" 
-                                            value="1">
-                                            </label>
-                                            <p :class="`like_price_text ${item.img}`">{{item.praise}}$</p>
-                                            </div>
-                                            <div class="delete_copf_card" v-on:click="getCopfDelite($event)">
-                                            <img src="delete.png" alt="" :class="`delete_copf_img ${item.img} ${item.id}`">
-                                            </div>
-                                        </div>
-                                    </template>
                                 </div>
                                 <div class="total_price">
                                     <p class="total_price_sum_csrd">TOTAL</p>
@@ -749,45 +723,18 @@
                 </div>
             </div>
 
+
             <nav class="cardbar_card">
                 
-                <template > 
-                        <div v-bind:class="`cardbar_card_product ${item.img}`" v-show = "seter" v-for = "item of goods">
-                            <div class="blackblok_button" :data-type="item.img" 
-                            v-on:click = "getProductHtmlCopf($event, goods)">
-                                <img src="corf_cardbar.png" alt="Chek" class="corp" :data-type="item.img">
-                                 <p class="corp_text" :data-type="item.img">Add to CartAdd</p>
-                            </div>
-                            <div class="box_media_card" onclick="window.open('single_page.html', '_self');">
-                             <img v-bind:src="item.img +'.png'" alt="Product" class="poduct_image">
-                                 <p class="product_text">{{ item.product }}<span class="product_text_price">{{ item.praise }}$</span>
-                                 </p>
-                            </div>
-                        </div>
-                </template>
-
-                <template>
-                <div :class="`cardbar_card_product ${item.img}`" v-for = "item of cardWindowUser">
-                    <div class="blackblok_button" :data-type="item.img">
-                        <img src="corf_cardbar.png" :data-type="item.img" alt="Chek" class="corp">
-                        <p class="corp_text" :data-type="item.img">Add to Cart</p>
-                    </div>
-                    <div class="box_media_card" onclick="window.open('single_page.html', '_self');">
-                        <img :src="`${item.img}.png`" alt="Product" class="poduct_image">
-                        <p class="product_text">{{ item.product }}<span class="product_text_price">{{ item.praise }}$</span>
-                        </p>
-                    </div>
-                </div>
-            </template>
             </nav>
-            
         </div>
     </section>
 
     <div class="botom_and_linernummer container">
         <div class="linernummer">
             <div class="linernummer_prev">
-                <p class="_prev_page"> <a class="_prev_page_link">
+                <p class="_prev_page"> 
+                    <a class="_prev_page_link">
                         < </a>
                 </p>
             </div>
@@ -820,7 +767,7 @@
             </div>
         </div>
         <div class="bottom_bloc">
-            <button class="brovse_add">View All</button>
+            <bottom class="brovse_add">View All</bottom>
         </div>
     </div>
 
@@ -943,7 +890,6 @@
 
         </div>
     </section>
-    </section>
     <div class="footer_mesenger">
         <div class="footer_mesenger_box container">
             <p class="copyrait">© 2017 Brand All Rights Reserved</p>
@@ -955,13 +901,12 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <!-- <script src="cardCopfShort.js"></script> -->
+    <script src="cardCopfShort.js"></script>
     <script src="cardVievChek.js"></script>
     <script src="cropting.js"></script>
-    <!-- <script src="filters.js"></script> -->
+    <script src="filters.js"></script>
     <script src="pageSortProductCard.js"></script>
-
+    <script src="trigger.js"></script>
 </body>
 
 </html>
