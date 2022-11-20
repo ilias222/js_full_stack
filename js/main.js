@@ -9,9 +9,9 @@ const app = new Vue({
         cartUrl: '/getBasket.json',
         cartItems: [],
         filtered: [],
-        imgCart: 'https://via.placeholder.com/50x100',
+        imgCart: 'https://placehold.it/50x100',
         products: [],
-        imgProduct: 'https://via.placeholder.com/200x150'
+        imgProduct: 'https://placehold.it/200x150'
     },
     methods: {
         getJson(url){
@@ -27,16 +27,16 @@ const app = new Vue({
                        if(find){
                            find.quantity++;
                        } else {
-                           const prod = Object.assign({quantity: 1}, item);//создание нового объекта на основе двух, указанных в параметрах
+                           const prod = Object.assign({quantity: 1}, item);
                            this.cartItems.push(prod)
                        }
                     }
                 })
         },
-        remove(item){
-            this.getJson(`${API}/deleteFromBasket.json`)
+        removet(item){
+            this.getJson(`${API}/addToBasket.json`)
                 .then(data => {
-                    if  (data.result === 1){
+                    if (data.result === 1) {
                         if(item.quantity>1){
                             item.quantity--;
                         } else {
@@ -45,19 +45,26 @@ const app = new Vue({
                     }
                 })
         },
-        filter(){
-            let regexp = new RegExp(this.userSearch, 'i');
-            this.filtered =  this.products.filter(el => regexp.test(el.product_name));
+        remove(item){
+            this.getJson(`${API}/addToBasket.json`)
+                .then(data => {
+
+                            this.cartItems.splice(this.cartItems.indexOf(item), 1);
+                })
+        },
+        filter(userSearch){
+            let regexp = new RegExp(userSearch, 'i');
+            this.filtered = this.products.filter(el => regexp.test(el.product_name));
         }
     },
     mounted(){
-        this.getJson(`${API + this.cartUrl}`)
+        this.getJson('getBasket.json')
             .then(data => {
                 for (let item of data.contents){
-                    this.cartItems.push(item);
+                    this.$data.cartItems.push(item);
                 }
             });
-        this.getJson(`${API + this.catalogUrl}`)
+        this.getJson('catalogData.json')
             .then(data => {
                 for (let item of data){
                     this.$data.products.push(item);
@@ -67,11 +74,23 @@ const app = new Vue({
         this.getJson(`getProducts.json`)
             .then(data => {
                 for(let item of data){
-                    this.products.push(item);
-                    this.filtered.push(item);
+                    this.$data.products.push(item);
+                    this.$data.filtered.push(item);
                 }
             })
     }
 
 });
 
+// let visib = document.querySelector(".lisky");
+// let div = document.querySelector(".mini_box");
+
+// if (localStorage.getItem("x")){
+//     div.innerHTML = localStorage.getItem("x");
+// }
+
+// visib.addEventListener('click', event => {
+    
+//     div.contentEditable = true;
+//     console.log(localStorage.setItem("x", div.innerHTML));
+// });

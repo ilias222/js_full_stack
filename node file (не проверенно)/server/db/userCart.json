@@ -1,0 +1,30 @@
+{
+    "amount": 46600,
+    "countGoods": 2,
+    "contents": [
+        {
+            "id_product": 123,
+            "product_name": "Майка спортивная",
+            "price": 52,
+            "img": "img_card/card0.png",
+            "like": "imp_page/like.png",
+            "size": "",
+            "quantity": 18
+          },
+          {
+            "id_product": 456,
+            "product_name": "Блузка строченная",
+            "price": 10,
+            "img": "img_card/card1.png",
+            "quantity": 18
+          },
+          {
+              "id_product": 345,
+              "product_name": "Кардиган",
+              "price": 32,
+              "like": "imp_page/like.png",
+              "img": "img_card/card2.png",
+              "quantity": 18
+            }
+    ]
+}
