@@ -1,0 +1,135 @@
+{
+    "page1":{
+    "card0":{
+        "product": "Майка спортивная",
+        "praise": 52.00,
+        "like": "like",
+        "img":"card0",
+        "id": "card01",
+        "size": "XXL,XL,M"
+    },
+    "card1":{
+        "product": "Блузка строченная",
+        "praise": 511.00,
+        "like": "like",
+         "img":"card1",
+         "id": "card02",
+         "size": "XXL,XL,M,S"
+    },
+    "card2":{
+        "product": "Кардиган",
+        "praise": 12.00,
+        "like": "like",
+        "img":"card2",
+        "id": "card03",
+        "size": "XXL,XL,M"
+    },
+    "card3":{
+        "product": "Штаны спортвные",
+        "praise": 222.00,
+        "like": "like",
+        "img":"card3",
+        "id": "card04",
+        "size": "S"
+    },
+    "card4":{
+        "product": "Штаны строгие",
+        "praise": 555.00,
+        "like": "like",
+        "img":"card4",
+        "id": "card05",
+        "size": "XXL,XL,M,S"
+    },
+    "card5":{
+        "product": "Майка поло",
+        "praise": 52.00,
+        "like": "like",
+        "img":"card5",
+        "id": "card06",
+        "size": "XXL,XL,M"
+    },
+    "card6":{
+        "product": "Штаны модные",
+        "praise": 52.00,
+        "like": "like",
+        "img":"card6",
+        "id": "card07",
+        "size": "XXL,XL"
+    },
+    "card7":{
+        "product": "Свитер шерстянной",
+        "praise": 52.00,
+        "like": "like",
+        "img":"card7",
+        "id": "card08",
+        "size": "XXL,XL,M,S"
+    }
+},
+    "page2":{
+        "card0":{
+            "product": "Майка с логотипом",
+            "praise": 52.00,
+            "like": "like",
+            "img":"card0",
+            "id": "card01",
+            "size": "M"
+        },
+        "card2":{
+            "product": "Блузка строгая",
+            "praise": 12.00,
+            "like": "like",
+            "img":"card2",
+            "id": "card03",
+            "size": "XXL,XL,M"
+        },
+        "card1":{
+            "product": "Куртка всесезонная",
+            "praise": 511.00,
+            "like": "like",
+            "img":"card1",
+            "id": "card02",
+            "size": "XXL,XL,M,S"
+        },
+        "card4":{
+            "product": "Куртка летная",
+            "praise": 555.00,
+            "like": "like",
+            "img":"card4",
+            "id": "card05",
+            "size": "M,S"
+        },
+        "card3":{
+            "product": "Шорты пляжные",
+            "praise": 222.00,
+            "like": "like",
+            "img":"card3",
+            "id": "card04",
+            "size": "XL,M,S"
+        },
+        "card5":{
+            "product": "Кофта с воротом",
+            "praise": 52.00,
+            "like": "like",
+            "img":"card5",
+            "id": "card06",
+            "size": "XXL,XL,S"
+        },
+        "card7":{
+            "product": "Кардиган",
+            "praise": 52.00,
+            "like": "like",
+            "img":"card7",
+            "id": "card08",
+            "size": "XXL,M"
+        },
+        "card6":{
+            "product": "Кепка",
+            "praise": 52.00,
+            "like": "like",
+            "img":"card6",
+            "id": "card07",
+            "size": "XXL,XL,M"
+        }
+    
+    }
+}

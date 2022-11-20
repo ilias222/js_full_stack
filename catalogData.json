@@ -1,0 +1,58 @@
+[
+    {
+      "id_product": 123,
+      "product_name": "Майка спортивная",
+      "price": 52,
+      "img": "img_card/card0.png",
+      "like": "imp_page/like.png",
+      "size": ""
+    },
+    {
+      "id_product": 456,
+      "product_name": "Блузка строченная",
+      "price": 10,
+      "img": "img_card/card1.png"
+    },
+    {
+        "id_product": 345,
+        "product_name": "Кардиган",
+        "price": 32,
+        "like": "imp_page/like.png",
+        "img": "img_card/card2.png"
+      },
+      {
+        "id_product": 233,
+        "product_name": "Штаны спортивные",
+        "price": 12,
+        "like": "imp_page/like.png",
+        "img": "img_card/card3.png"
+      },
+      {
+        "id_product": 211,
+        "product_name": "Штаны строгие",
+        "price": 23,
+        "like": "imp_page/like.png",
+        "img": "img_card/card4.png"
+      },
+      {
+        "id_product": 521,
+        "product_name": "Майка поло",
+        "price": 11,
+        "like": "imp_page/like.png",
+        "img": "img_card/card5.png"
+      },
+      {
+        "id_product": 551,
+        "product_name": "Штаны модные",
+        "price": 90,
+        "like": "imp_page/like.png",
+        "img": "img_card/card6.png"
+      },
+      {
+        "id_product": 551,
+        "product_name": "Свитер шерстянной",
+        "price": 21,
+        "like": "imp_page/like.png",
+        "img": "img_card/card7.png"
+      }
+  ]

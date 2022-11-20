@@ -10,44 +10,35 @@
   <!--
 Необязательное задание.
 
-Необходимо от пользователя получить число.
-Необходимо вывести разряды числа, а именно: количество сотен, десятков и единиц.
-
-Пример:
-Пользователь ввел число 163. Программа должна вывести:
-"В числе 163 количество сотен: 1, десятков: 6, единиц: 3"
-
-Пример 2:
-Пользователь ввел число 74. Программа должна вывести:
-"В числе 74 количество сотен: 0, десятков: 7, единиц: 4"
-
-Пример 3:
-Пользователь ввел число 9537. Программа должна вывести:
-"В числе 9537 количество сотен: 5, десятков: 3, единиц: 7"
-
-Уточнение: пользователь всегда вводит корректное положительное целое число.
+Необходимо реализовать функцию-конструктор Rectangle.
 -->
-  <form action="" class="boyChisla">
-    <label for="sotni" style="display: block; margin: 30px 0px;">
-      <p style="display: inline">Сотни</p>
-      <input type="text" id="sotni" disabled style="padding: 0px 5px">
-    </label>
-    <label for="desatki" style="display: block; margin: 30px 0px;">
-      <p style="display: inline">Десятки</p>
-      <input type="text" id="desatki" disabled style="padding: 0px 5px">
-    </label>
-    <label for="edinizi" style="display: block; margin: 30px 0px;">
-      <p style="display: inline">Единицы</p>
-      <input type="text" id="edinizi" disabled style="padding: 0px 5px">
-    </label>
-  </form>
   <script>
     "use strict";
 
-    let userChislo = prompt('Введи число от 100 до 999, для разбивки его на разряды');
-    document.getElementById('sotni').value = Number.parseInt((userChislo / 100) % 10);
-    document.getElementById('desatki').value = Number.parseInt((userChislo / 10) % 10);
-    document.getElementById('edinizi').value = Number.parseInt(userChislo % 10);
+    /**
+     * Returns the rectangle object with width and height parameters and
+     * getArea() method.
+     *
+     * @param {number} width - Rectangle width
+     * @param {number} height - Rectangle height
+     * @return {Rectangle}
+     */
+    function Rectangle(width, height) {
+      this.width = width;
+      this.height = height;
+    }
+
+    Rectangle.prototype.getArea = function () {
+      return this.width * this.height;
+    }
+
+
+
+
+    const r = new Rectangle(10, 20);
+    console.log(r.width); // 10
+    console.log(r.height); // 20
+    console.log(r.getArea()); // 200
   </script>
 </body>
 
